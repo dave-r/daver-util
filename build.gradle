@@ -1,19 +1,20 @@
 apply plugin: 'java'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.8
 version = 1.0
 
 jar {
-	manifest {
-		attributes 'Implementation-Title': 'daver-util',
-		'Implementation-Version': version
-	}
+    manifest {
+        attributes 'Implementation-Title': 'daver-util',
+        'Implementation-Version': version
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	testCompile 'junit:junit:4.+'
+    testCompile 'junit:junit:4.+'
 }
