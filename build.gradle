@@ -1,8 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.8
-version = 1.0
+version = '1.0-SNAPSHOT'
+group = 'org.daver'
 
 jar {
     manifest {
@@ -16,5 +18,14 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.+'
+    compile 'junit:junit:4.+'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
 }
