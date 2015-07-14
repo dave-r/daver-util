@@ -9,7 +9,7 @@ group = 'org.daver'
 jar {
     manifest {
         attributes 'Implementation-Title': 'daver-util',
-        'Implementation-Version': version
+                'Implementation-Version': version
     }
 }
 
